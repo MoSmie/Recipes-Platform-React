@@ -1,10 +1,10 @@
 # to run the application, please execute following comments
-cd client 
-npm install 
-npm run build 
-cd ../server 
-npm install 
-node app.js
+- cd client 
+  npm install 
+  npm run build 
+- cd ../server 
+  npm install 
+  node app.js
 
 
 
@@ -17,5 +17,5 @@ Functionality:
 - Support for RWD.
 
 Written using technologies:
--Frontend: Javascript (Node.js), Typescript, SASS and React.
--Backend: building HTTP Server based on express.js with application REST API. 
+- Frontend: Javascript (Node.js), Typescript, SASS and React.
+- Backend: building HTTP Server based on express.js with application REST API. 
