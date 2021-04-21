@@ -1,0 +1,41 @@
+@mixin inputDefault() {
+  padding: 10px;
+  border: 2px solid $mainColor;
+  border-radius: 6px;
+}
+@mixin inputDefaultFocus() {
+  border: 2px solid #8f8f8f;
+  outline: none;
+}
+input {
+  @include inputDefault();
+  &[type="text"],
+  &[type="number"] {
+    width: 300px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  &[type="textNarrow"] {
+    width: 145px;
+    margin: 0px 6px 10px 0px;
+  }
+  &:focus {
+    @include inputDefaultFocus();
+  }
+}
+textarea {
+  @include inputDefault();
+  font-family: inherit;
+  width: 600px;
+  resize: none;
+  overflow: hidden;
+  min-height: 50px;
+  max-height: 100px;
+  &:focus {
+    @include inputDefaultFocus();
+  }
+}
+.textarea-narrow,
+.input-narrow {
+  padding: 3px;
+}

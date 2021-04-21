@@ -1,0 +1,54 @@
+@mixin buttonDefault() {
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button {
+  @include buttonDefault();
+  background-color: $mainColor;
+  color: white;
+  padding: 10px 0;
+  margin: 5px 15px;
+  width: 100px;
+  border: 2px solid #ffbb00;
+  &:focus {
+    outline: 0;
+  }
+}
+.button-yellow,
+.button:hover {
+  background-color: white;
+  color: $mainColor;
+  border: 2px solid $mainColor;
+}
+
+.button-yellow:hover {
+  background-color: $mainColor;
+  color: white;
+}
+.edit {
+  @include buttonDefault();
+  background-image: url(/img/edit.svg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 17px;
+  &:hover {
+    width: 16px;
+    height: 19px;
+  }
+}
+.save {
+  @include buttonDefault();
+  background-image: url(/img/check.svg);
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 17px;
+}

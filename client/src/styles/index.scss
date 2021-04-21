@@ -1,0 +1,141 @@
+$mainColor: #ffbb00;
+$grey: #484747;
+
+@import "./_navBar";
+@import "./_button";
+@import "./_hamburger";
+@import "./_mediaQueries";
+@import "./_inputsAndTextarea";
+
+@mixin flexDirection($flexDirection) {
+  display: flex;
+  flex-direction: $flexDirection;
+}
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $grey;
+  line-height: 1.5;
+}
+.flex-column {
+  @include flexDirection(column);
+}
+.flex-row {
+  @include flexDirection(row);
+}
+.center {
+  @include flexCenter();
+}
+.main {
+  width: 90vw;
+  margin: auto;
+  // margin: 1vw 8vw;
+  // margin: 1vw 8vw;
+}
+.flex-grow {
+  flex: 1 0 0;
+}
+.form-section {
+  margin: 10px;
+}
+label {
+  display: block;
+  font-weight: 700;
+}
+.bold {
+  font-weight: 700;
+}
+.font-small {
+  font-size: 0.8em;
+  margin: 0;
+}
+.font-decoration {
+  align-self: center;
+  margin: 1em 0 2em 0;
+  color: #474544;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* Landing Page */
+.gallery-wrapper {
+  @include flexCenter();
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex: 1;
+  justify-content: flex-start;
+}
+.flex-card {
+  @include flexDirection(row);
+  background-size: cover;
+  height: 300px;
+  align-self: flex-end;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 0.2em;
+  flex: 1 0 auto;
+  max-width: 450px;
+  > img {
+    height: 300px;
+  }
+}
+.align-flex-end {
+  align-self: flex-end;
+  color: #ffffff;
+  h2 {
+    margin: 0;
+  }
+}
+.shadow {
+  -moz-box-shadow: inset 0 -50px 55px -16px #000000;
+  -webkit-box-shadow: inset 0 -50px 55px -16px #000000;
+  box-shadow: inset 0 -50px 55px -16px #000000;
+}
+/* Recipe View */
+.header-img {
+  background-size: cover;
+  height: 300px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.2em;
+  flex: 1 0 auto;
+  padding: 10px;
+}
+.article-and-aside {
+  display: flex;
+  .article {
+    padding: 0 1vw;
+  }
+  .aside {
+    @include flexDirection(column);
+    flex: 1 0 auto;
+    padding: 0 15px;
+    > table > tr > td:first-child {
+      padding-right: 15px;
+    }
+  }
+}
+
+/* Add/Edit Form */
+.list-of-added-value {
+  margin: 1.5vw 1vw;
+  font-style: italic;
+  color: black;
+  border: 2px solid #ffe49a;
+  border-radius: 6px;
+  padding: 10px;
+}
+.list-items-to-edit {
+  width: 615px;
+}
