@@ -13,7 +13,7 @@
 - Backend: HTTP Server based on express.js with application REST API. 
 
 
-### To run the application, please execute following comments
+### To run the application, please execute following commands:
 - cd client 
   - npm install 
   - npm run build 
